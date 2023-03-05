@@ -1,6 +1,5 @@
-import useAuth from '@/hooks/useAuth';
+import useAuth from '../hooks/useAuth';
 import Head from 'next/head'
-import Image from 'next/image'
 import { useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form';
 
@@ -9,7 +8,7 @@ interface FormValues {
   password: string
 }
 
-function login() {
+function Login() {
   const [login,setLogin]=useState(false);
 
   const {signIn,signUp}=useAuth()
@@ -79,4 +78,4 @@ function login() {
   )
 }
 
-export default login
+export default Login
