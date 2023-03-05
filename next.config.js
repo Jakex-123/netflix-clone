@@ -2,10 +2,9 @@
 const nextConfig = {
   reactStrictMode: false,
 }
-
 module.exports = nextConfig
-module.exports = {
+module.exports =withTM( {
   images: {
     domains: ['image.tmdb.org','rb.gy'],
   },
-};
+});
