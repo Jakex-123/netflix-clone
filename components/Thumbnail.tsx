@@ -17,7 +17,7 @@ function Thumbnail({ movie }: Props) {
       setShowModal(true)
       setCurrentMovie(movie)
     }} className="relative h-28 min-w-[180px] md:min-w-[260px] transition duration-200 ease-out md:hover:scale-105 md:h-36">
-      <Image  width={260} height={144} src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path || movie.poster_path}`}
+      <img  width={260} height={144} src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path || movie.poster_path}`}
         className="rounded-sm object-cover md:rounded"
         alt=""
       />
