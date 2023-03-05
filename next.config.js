@@ -1,18 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
 }
-
 module.exports = nextConfig
-module.exports = {
+module.exports =withTM( {
   images: {
-    domains: ['image.tmdb.org','rb.gy','localhost:3000'],
+    domains: ['image.tmdb.org','rb.gy'],
   },
-};
-module.exports = {
-  eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true,
-  },
-}
+});
