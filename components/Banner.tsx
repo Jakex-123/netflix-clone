@@ -23,10 +23,13 @@ export default function Banner({netflixOriginals}:Props) {
   
     return (
     <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[75vh] lg:justify-end lg:pb-12'>
-        <div className='absolute -z-10 top-0 left-0 h-[95vh] w-screen '>
-            <Image alt='' fill priority className='object-cover' src={`https://image.tmdb.org/t/p/original${movie?.poster_path||movie?.backdrop_path}`}></Image> 
-            
-        </div>
+        <div className="absolute top-0 left-0 -z-10 h-[95vh] w-screen">
+        <Image
+          fill={true} alt=''
+          src={`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}
+          className='object-cover'
+        />
+      </div>
         <h1 className='text-2xl md:mt-auto md:text-4xl font-bold lg:text-7xl'>{movie?.title||movie?.original_name|| movie?.name}</h1>
         <p className=' text-shadow-md text-xs md:text-lg lg:text-2xl max-w-xs md:max-w-lg lg:max-w-2xl'>{movie?.overview}</p>
         <div className='flex space-x-3'>
